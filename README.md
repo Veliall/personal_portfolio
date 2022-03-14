@@ -1,2 +1,2 @@
-# personal_portfolio
-Personal site created by Django
+# Personal Portfolio
+##Personal site created by Django
