@@ -1,1 +1,43 @@
-<h1>This is my portfolio start page</h1>
+{% extends 'portfolio/base.html' %}
+{% block title %}
+    <title>Христюк Игорь: Главная страница</title>
+{% endblock %}
+{% block content %}
+
+    <h1 class="text-center">Христюк Игорь</h1>
+    <h2 class="text-center">Разработчик на языках Java, Kotlin и Python</h2>
+
+    {% load static %}
+
+    <div class="text-center">
+        <img src="{% static 'portfolio/photo.jpg' %}" class="rounded" width="40%" alt="Здесь было фото(((">
+    </div>
+    <br>
+    <div class="alert alert-success" role="alert">
+        <h4 class="text-center">Немного обо мне</h4>
+        <hr>
+        <p class="text-center">Здесь должен быть краткий текст о себе, но я его пока не придумал(</p>
+    </div>
+    <hr>
+    <h4 class="text-center">Примеры моих проектов</h4>
+    <hr>
+
+    <div class="row">
+        {% for project in projects %}
+            <div class="col-sm-4">
+                <div class="card" style="width: 100%;">
+                    <a href="{{ project.url }}">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="проект">
+                    </a>
+                    <div class="card-body">
+                        <h2>{{ project.title }}</h2>
+                        <p>{{ project.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+
