@@ -1,9 +1,26 @@
-Hello blogs
-
-{% for blog in blogs %}
-
-    <h2>{{ blog.title }}</h2>
-    <h5>{{ blog.date }}</h5>
-    <p>{{ blog.description }}</p>
-
-{% endfor %}
+{% extends 'portfolio/base.html' %}
+{% block title %}
+    <title>Христюк Игорь: Блог</title>
+{% endblock %}
+{% block content %}
+    <div class="text-center">
+        <h1>Личный блог</h1>
+        <hr>
+        {% for blog in blogs %}
+            <div class="card text-center">
+                <div class="card-header">
+                    <a href="{% url 'blog:detail' blog.id %}">
+                        <h5 class="card-title">{{ blog.title }}</h5>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ blog.description|safe|truncatechars:100 }}</p>
+                </div>
+                <div class="card-footer text-muted">
+                    {{ blog.date|date:'d M Y' }}
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+{% endblock %}
