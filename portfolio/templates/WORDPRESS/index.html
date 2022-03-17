@@ -1,17 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORDPRESS</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'wordpress/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'wordpress/css/style.css' %}">
 </head>
 <body>
 <section class="promo">
     <div class="container">
         <div class="logo">
-            <img src="icons/logo.svg" alt="logo" class="logo_img">
+            <img src="{% static 'wordpress/icons/logo.svg' %}" alt="logo" class="logo_img">
             <div class="logo_text">WordPress интенсив</div>
         </div>
 
@@ -31,7 +32,7 @@
         <button class="promo_btn">Записаться на интенсив!</button>
         <div class="more">
             <div class="more_text">узнать больше об интенсиве</div>
-            <img src="icons/down.png" alt="down" class="more_img">
+            <img src="{% static 'wordpress/icons/down.png' %}" alt="down" class="more_img">
         </div>
     </div>
 </section>
@@ -41,17 +42,17 @@
         <div class="waiting_divider"></div>
         <div class="waiting_subheader">2 бесплатных полноценных обучающих вебинара, где:</div>
         <div class="waiting_wrapper">
-            <div class="waiting_item"><img src="img/waiting_1.png" alt="waiting" class="waiting_img">
+            <div class="waiting_item"><img src="{% static 'wordpress/img/waiting_1.png' %}" alt="waiting" class="waiting_img">
                 <div class="waiting_text">Всего за два бесплатных вебинара мы научим вас,
                     как создать свой сайт на WordPress.
                 </div>
             </div>
-            <div class="waiting_item"><img src="img/waiting_2.png" alt="waiting" class="waiting_img">
+            <div class="waiting_item"><img src="{% static 'wordpress/img/waiting_2.png' %}" alt="waiting" class="waiting_img">
                 <div class="waiting_text">Покажем, как правильно оптимизировать сайт и сделать его привлекательным для
                     поисковых систем. Только свежая, профессиональная и актуальная информация!
                 </div>
             </div>
-            <div class="waiting_item"><img src="img/waiting_3.png" alt="waiting" class="waiting_img">
+            <div class="waiting_item"><img src="{% static 'wordpress/img/waiting_3.png' %}" alt="waiting" class="waiting_img">
                 <div class="waiting_text">Вы узнаете, что такое «хорошая индексация» <br>«высокая посещаемость»,
                     «стабильный прирост посетителей», «ТОП по запросам» и, что намного важнее, как добиться всех этих
                     показателей!
@@ -77,7 +78,7 @@
             <span>Мы научим вас, как сделать ваш сайт привлекательным для поисковых систем и посоветуем, как вывести его на
             первые страницы, обходя всех конкурентов.</span>
         </div>
-        <img src="img/woman_bg.png" alt="woman" class="optimization_img">
+        <img src="{% static 'wordpress/img/woman_bg.png' %}" alt="woman" class="optimization_img">
     </div>
 </section>
 <section class="finish">
@@ -86,17 +87,17 @@
         <div class="finish_divider"></div>
         <div class="finish_wrapper">
             <div class="finish_item">
-                <div class="finish_round"><img src="icons/finish_icon_1.svg" alt="" class="finish_icon">
+                <div class="finish_round"><img src="{% static 'wordpress/icons/finish_icon_1.svg' %}" alt="" class="finish_icon">
                 </div>
                 <div class="finish_text">Создать свой сайт или блог</div>
             </div>
             <div class="finish_item">
-                <div class="finish_round"><img src="icons/finish_icon_2.svg" alt="" class="finish_icon">
+                <div class="finish_round"><img src="{% static 'wordpress/icons/finish_icon_2.svg' %}" alt="" class="finish_icon">
                 </div>
                 <div class="finish_text">Правильно его оптимизировать</div>
             </div>
             <div class="finish_item">
-                <div class="finish_round"><img src="icons/finish_icon_3.svg" alt="" class="finish_icon">
+                <div class="finish_round"><img src="{% static 'wordpress/icons/finish_icon_3.svg' %}" alt="" class="finish_icon">
                 </div>
                 <div class="finish_text">Обеспечить ему медлен-
                     ный, но верный рост в
@@ -104,12 +105,12 @@
                 </div>
             </div>
             <div class="finish_item">
-                <div class="finish_round"><img src="icons/finish_icon_4.svg" alt="" class="finish_icon">
+                <div class="finish_round"><img src="{% static 'wordpress/icons/finish_icon_4.svg' %}" alt="" class="finish_icon">
                 </div>
                 <div class="finish_text">Достигнуть стабильного прироста посетителей</div>
             </div>
             <div class="finish_item">
-                <div class="finish_round"><img src="icons/finish_icon_5.svg" alt="" class="finish_icon">
+                <div class="finish_round"><img src="{% static 'wordpress/icons/finish_icon_5.svg' %}" alt="" class="finish_icon">
                 </div>
                 <div class="finish_text">Получать ощутимую прибыль</div>
             </div>
@@ -118,7 +119,7 @@
 </section>
 <section class="present">
     <div class="container">
-        <img src="icons/gift.svg" alt="gift" class="present_img">
+        <img src="{% static 'wordpress/icons/gift.svg' %}" alt="gift" class="present_img">
         <div class="present_text">Для всех участников интенсива предусмотрены бонусы и подарки. Нажимайте на кнопку
             ниже, принимайте участие в вебинарах и забирайте свой приз по окончании обучения!
         </div>
@@ -127,7 +128,7 @@
 </section>
 <section class="first_web">
     <div class="container">
-        <img src="img/first.svg" alt="first" class="first_web_img">
+        <img src="{% static 'wordpress/img/first.svg' %}" alt="first" class="first_web_img">
         <h3 class="first_web_header">Первый вебинар состоится:</h3>
         <h2 class="first_web_date">10 сентября в 20:00 по Москве</h2>
         <div class="first_web_text">Успейте записаться, количество мест ограничено!</div>
